@@ -147,16 +147,3 @@ class Animation {
 		return breakPoint;
 	}
 }
-
-/*
-var animator = new Animator();
-// Animator.runGroup([Tweeners]], [allowed to break])
-animator.runGroup([
-	Tweener.soAnimation,
-	Tweener.doSecondAnimation,
-	Tweener.doThirdAnimation
-], [0, 0, 1]);
-
-animator.runGroup([
-	Tweener.doAnimation
-]);*/
