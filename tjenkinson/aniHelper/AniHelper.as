@@ -111,7 +111,7 @@ class Group {
 		}
 		
 		if (b.length != a.length) {
-			throw new Error("The number of break points didn't match the number of tween operations");
+			throw new Error("The number of break points didn't match the number of tween operations.");
 		}
 		animations = new Vector.<Animation>(a.length, true);
 		for(var i:int=0; i<a.length; i++) {
