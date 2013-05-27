@@ -18,7 +18,7 @@ package tjenkinson.aniHelper {
 			
 			// generate the vectors from the arrays
 			var tweeners:Vector.<Vector.<TweenerParams>> = new Vector.<Vector.<TweenerParams>>(tweenersA.length, true);
-			for (var i:int; i<tweenersA.length; i++) {
+			for (var i:uint; i<tweenersA.length; i++) {
 				tweeners[i] = Vector.<TweenerParams>(tweenersA[i]);
 			}
 			var breakPoints:Vector.<Boolean> = Vector.<Boolean>(breakPointsA);
@@ -63,7 +63,7 @@ package tjenkinson.aniHelper {
 			
 			var tParams:Vector.<TweenerParams> = animation.getTweenerParams();
 			
-			for (var i:int=0; i<tParams.length; i++) {
+			for (var i:uint=0; i<tParams.length; i++) {
 				var options:Object = tParams[i].getOptions();
 				if (options.onComplete != null) {
 					var originalOnComplete:Function = options.onComplete;
@@ -105,7 +105,7 @@ class Group {
 	public function Group(a:Vector.<Vector.<TweenerParams>>, b:Vector.<Boolean>=null) {
 		if (b == null) {
 			b = new Vector.<Boolean>;
-			for(var i:int=0; i<a.length; i++) {
+			for(var i:uint=0; i<a.length; i++) {
 				b.push(false);
 			}
 		}
@@ -114,7 +114,7 @@ class Group {
 			throw new Error("The number of break points didn't match the number of tween operations.");
 		}
 		animations = new Vector.<Animation>(a.length, true);
-		for(var i:int=0; i<a.length; i++) {
+		for(var i:uint=0; i<a.length; i++) {
 			animations[i] = new Animation(a[i], b[i]);
 		}
 	}
