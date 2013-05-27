@@ -18,7 +18,7 @@ package tjenkinson.aniHelper {
 			
 			// generate the vectors from the arrays
 			var tweeners:Vector.<Vector.<TweenerParams>> = new Vector.<Vector.<TweenerParams>>(tweenersA.length, true);
-			for (var i:uint; i<tweenersA.length; i++) {
+			for (var i:uint=0; i<tweenersA.length; i++) {
 				tweeners[i] = Vector.<TweenerParams>(tweenersA[i]);
 			}
 			var breakPoints:Vector.<Boolean> = Vector.<Boolean>(breakPointsA);
