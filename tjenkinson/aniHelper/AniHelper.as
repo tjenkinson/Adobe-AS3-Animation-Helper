@@ -14,14 +14,15 @@ package tjenkinson.aniHelper {
 		
 		public function AniHelper() {}
 		
-		public function runGroup(tweenersA:Array, breakPointsA:Array):void {
+		public function runGroup(tweenersA:Array, breakPointsA:Array=null):void {
 			
 			// generate the vectors from the arrays
 			var tweeners:Vector.<Vector.<TweenerParams>> = new Vector.<Vector.<TweenerParams>>(tweenersA.length, true);
 			for (var i:uint=0; i<tweenersA.length; i++) {
 				tweeners[i] = Vector.<TweenerParams>(tweenersA[i]);
 			}
-			var breakPoints:Vector.<Boolean> = Vector.<Boolean>(breakPointsA);
+			
+			var breakPoints:Vector.<Boolean> = breakPointsA != null ? Vector.<Boolean>(breakPointsA) : null;
 			
 			groupsQueue.push(new Group(tweeners, breakPoints));
 			if (currentGroup == null) {
