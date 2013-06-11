@@ -70,7 +70,7 @@ package tjenkinson.aniHelper {
 					var originalOnComplete:Function = options.onComplete;
 					var originalOnCompleteParams:Array = options.onCompleteParams;
 					options.onCompleteParams = [];
-					var originalScope:Object = options.onCompleteScope;
+					var originalScope:Object = options.onCompleteScope || tParams[i].getElement(); // use elements as default if none specified
 					options.onCompleteScope = this;
 					
 					options.onComplete = function() {
